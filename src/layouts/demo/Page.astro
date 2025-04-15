@@ -1,0 +1,42 @@
+---
+// Corrected import path
+// Removed Button import as it's no longer used here
+import { Header, Footer } from '../../components/demo/odyssey-theme.js'; 
+import Layout from './Base.astro';
+import type { Props as BaseHeadProps } from '../../components/demo/head/BaseHead.astro'; // Adjusted path
+import Logo from '../../components/demo/Logo.astro'; // Adjusted path
+import settings from '../../config/settings.js'; // Adjusted path
+import { footerLists, footerSocials } from '../../config/footer.js'; // Adjusted path
+
+
+export interface Props {
+	seo?: BaseHeadProps;
+}
+
+import { nav } from '../../config/nav.js'; // Adjusted path
+
+const { seo } = Astro.props as Props;
+---
+
+<Layout seo={seo}>
+	<Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo />
+		</span>
+		{/* Removed the Button that was previously in the action-item slot */}
+	</Header>
+	<div id="page">
+		<slot />
+	</div>
+	<Footer
+		slot="footer"
+		background="var(--theme-surface-1)"
+		color="var(--theme-on-surface-1)"
+		footerLists={footerLists}
+    footerSocials={footerSocials}
+		copyrightName={settings.name}
+    showPlug={settings.showPlug}
+	>
+		<Logo slot="logo" />
+	</Footer>
+</Layout>

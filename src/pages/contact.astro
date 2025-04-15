@@ -1,0 +1,72 @@
+---
+// Corrected import paths
+import ContactForm from '../components/demo/forms/ContactForm.astro'; 
+import Layout from '../layouts/demo/Page.astro';
+import { Container } from '../components/demo/odyssey-theme.js';
+
+const seo = {
+	title: 'Kontakta Oss | Datatr@ssel',
+	description: 'Kontaktuppgifter och formulär',
+};
+---
+
+<Layout seo={seo}>
+	<Container>
+		<section class="contact-hero__section">
+			<div class="contact-hero__text-section">
+				<h1>Kontakta Oss</h1>
+				<p>
+					Fyll i formuläret nedan eller kontakta oss direkt via telefon eller e-post.
+				</p>
+				<div>
+          <h2>Kontaktuppgifter</h2>
+					<p>
+						Telefon: <em><a href="tel:DIN-TELEFON">[Ditt Telefonnummer]</a></em>
+          </p>
+          <p>
+            E-post: <em><a href="mailto:DIN-EMAIL">[Din E-postadress]</a></em>
+					</p>
+          <p>
+            Adress: [Din Adress], [Postnummer] [Ort] (Endast bokade besök)
+          </p>
+				</div>
+			</div>
+			<div class="col-2__container">
+				<ContactForm />
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.contact-hero__section {
+		margin: var(--section-margin) auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		min-height: calc(90vh - var(--navbar-height));
+		gap: 3rem;
+	}
+	.contact-hero__text-section {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+  .contact-hero__text-section h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+	.col-2__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	@media (max-width: 768px) {
+		.contact-hero__section {
+			grid-template-columns: 1fr;
+      min-height: unset; /* Adjust height for mobile */
+		}
+	}
+</style>

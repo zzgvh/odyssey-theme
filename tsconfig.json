@@ -14,7 +14,8 @@
       "@layouts/*": ["layouts/*"],
       "@assets/*": ["assets/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@components/odyssey-theme": ["components/demo/odyssey-theme.js"] // Added specific alias
     }
 	}
 }

@@ -1,0 +1,43 @@
+---
+// Corrected import paths
+import { TextSection } from '../components/demo/odyssey-theme.js'; 
+import Layout from '../layouts/demo/Page.astro'; 
+import HeroSection from '../components/demo/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'Om Oss | Datatr@ssel',
+	description: 'Lär känna teamet bakom Datatr@ssel',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Om Oss</h1>
+			<p>
+				Vi är din lokala partner för allt inom IT.
+			</p>
+		</div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/home/sand-hero.jpg"
+        alt="Teamet Datatr@ssel"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
+  <TextSection narrow>
+    <h2>Vår Vision</h2>
+    <p>
+      Att göra teknik tillgänglig och problemfri för alla, oavsett om du är privatperson eller företagare.
+    </p>
+    <h2>Vårt Team</h2>
+    <p>
+      Vi består av erfarna tekniker med passion för problemlösning och kundservice. [Lägg till mer information om teamet här].
+    </p>
+    <h2>Varför Välja Oss?</h2>
+     <p>
+      Vi erbjuder personlig service, snabba lösningar och konkurrenskraftiga priser. Din IT-trygghet är vår prioritet.
+    </p>
+  </TextSection>
+</Layout>

@@ -1,0 +1,53 @@
+---
+// Corrected import paths
+import { TextSection } from '../components/demo/odyssey-theme.js'; 
+import Layout from '../layouts/demo/Page.astro'; 
+import HeroSection from '../components/demo/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'Frågor och svar | Datatr@ssel',
+	description: 'Vanliga frågor om våra IT-tjänster',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Frågor och Svar (FAQ)</h1>
+			<p>
+				Här har vi samlat svar på de vanligaste frågorna.
+			</p>
+		</div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/home/ocean-hero.jpg"
+        alt="Frågor och svar IT-support"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
+  <TextSection narrow>
+    <h2>Allmänt</h2>
+    <details>
+      <summary>Vilka områden arbetar ni i?</summary>
+      <p>Vi utgår från [Din Ort] men kan ofta hjälpa till på distans oavsett var du befinner dig.</p>
+    </details>
+    <details>
+      <summary>Vad kostar era tjänster?</summary>
+      <p>Priset varierar beroende på tjänst och omfattning. Kontakta oss för en offert. För privatpersoner tillämpar vi RUT-avdrag där det är möjligt.</p>
+    </details>
+     <h2>Privatpersoner</h2>
+     <details>
+      <summary>Kan ni hjälpa mig att installera min nya skrivare?</summary>
+      <p>Absolut! Vi hjälper till med installation av all typ av kringutrustning.</p>
+    </details>
+    <h2>Företag</h2>
+     <details>
+      <summary>Erbjuder ni supportavtal?</summary>
+      <p>Ja, vi har flexibla supportavtal anpassade för företags behov.</p>
+    </details>
+     <p>
+      Hittar du inte svaret på din fråga? Tveka inte att <a href="/contact">kontakta oss</a>.
+    </p>
+  </TextSection>
+</Layout>

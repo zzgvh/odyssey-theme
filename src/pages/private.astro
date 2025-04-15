@@ -1,0 +1,49 @@
+---
+// Corrected TextSection import path
+import { TextSection } from '../components/demo/odyssey-theme.js'; 
+// Corrected layout import path
+import Layout from '../layouts/demo/Page.astro'; 
+// Corrected HeroSection import path
+import HeroSection from '../components/demo/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'Privat | Datatr@ssel', // Updated Title
+	description: 'Information för privatpersoner', // Updated Description
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Privat</h1> {/* Updated Heading */}
+			<p>
+				Här finns information och tjänster för privatpersoner.
+			</p>
+		</div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/home/classic-hero.jpg"
+        alt="Privatpersoner datorhjälp"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
+  <TextSection narrow>
+    <h2>Vanliga Problem Vi Löser</h2>
+    <ul>
+      <li>Datorn startar inte</li>
+      <li>Virus och skadlig programvara</li>
+      <li>Problem med internetuppkoppling</li>
+      <li>Installation av programvara och hårdvara</li>
+      <li>Backup och återställning av data</li>
+      <li>Optimering för bättre prestanda</li>
+    </ul>
+    <h2>Hur Vi Kan Hjälpa Till</h2>
+    <p>
+      Vi erbjuder felsökning och reparation på plats eller i vår verkstad. Kontakta oss för en kostnadsfri bedömning.
+    </p>
+    <p>
+      Vi kan även hjälpa till med rådgivning vid köp av ny dator eller kringutrustning för att säkerställa att du får produkter som passar just dina behov.
+    </p>
+  </TextSection>
+</Layout>

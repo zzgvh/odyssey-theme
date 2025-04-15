@@ -1,18 +1,27 @@
 export const nav = [
 	{
-		title: 'Home',
-		slug: '/',
+		title: 'Privat',
+		slug: '/private',
 	},
 	{
-		title: 'Blog',
-		slug: '/blog',
+		title: 'Företag',
+		slug: '/business',
 	},
 	{
-		title: 'About',
-		slug: '/company/about',
+		title: 'Tjänster',
+		slug: '/services',
 	},
 	{
-		title: 'Contact',
-		slug: '/company/contact',
+		title: 'Frågor',
+		slug: '/faq',
 	},
+    {
+        title: 'Kontakt',
+        slug: '/contact'
+    },
+    {
+        title: 'Om',
+        slug: '/about'
+    }
+    
 ];

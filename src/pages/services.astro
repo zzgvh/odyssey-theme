@@ -1,0 +1,50 @@
+---
+// Corrected import paths
+import { TextSection } from '../components/demo/odyssey-theme.js'; 
+import Layout from '../layouts/demo/Page.astro'; 
+import HeroSection from '../components/demo/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'Tjänster | Datatr@ssel',
+	description: 'Översikt över våra IT-tjänster',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Våra Tjänster</h1>
+			<p>
+				En komplett lista över de IT-tjänster vi erbjuder för både privatpersoner och företag.
+			</p>
+		</div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/home/earth-hero.jpg"
+        alt="IT-tjänster översikt"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
+  <TextSection narrow>
+    <h2>För Privatpersoner</h2>
+    <ul>
+      <li>Datorreparation och felsökning</li>
+      <li>Virusborttagning och säkerhetscheck</li>
+      <li>Installation och konfiguration</li>
+      <li>Hjälp med nätverk och WiFi</li>
+      <li>Personlig rådgivning</li>
+    </ul>
+    <h2>För Företag</h2>
+    <ul>
+      <li>Drift och underhåll av IT-miljö</li>
+      <li>Nätverk och infrastruktur</li>
+      <li>Molntjänster och serverlösningar</li>
+      <li>IT-säkerhet och backupstrategier</li>
+      <li>Supportavtal</li>
+    </ul>
+     <p>
+      Kontakta oss för mer detaljerad information om varje tjänst och hur vi kan hjälpa just dig eller ditt företag.
+    </p>
+  </TextSection>
+</Layout>

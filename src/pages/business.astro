@@ -1,0 +1,43 @@
+---
+// Corrected import paths
+import { TextSection } from '../components/demo/odyssey-theme.js'; 
+import Layout from '../layouts/demo/Page.astro'; 
+import HeroSection from '../components/demo/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'Företag | Datatr@ssel',
+	description: 'Tjänster och information för företag',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Företag</h1>
+			<p>
+				Skräddarsydda IT-lösningar för ditt företag.
+			</p>
+		</div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/home/dark-hero.jpg"
+        alt="IT-support för företag"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
+  <TextSection narrow>
+    <h2>Våra Företagstjänster</h2>
+    <ul>
+      <li>Nätverksinstallation och underhåll</li>
+      <li>Serverhantering och molntjänster</li>
+      <li>IT-säkerhet och backup</li>
+      <li>Supportavtal och fjärrsupport</li>
+      <li>Inköp och installation av hårdvara/mjukvara</li>
+    </ul>
+    <h2>Varför Välja Oss?</h2>
+    <p>
+      Vi förstår vikten av driftsäker IT för företag. Vi erbjuder snabb service och proaktiva lösningar för att minimera driftstopp.
+    </p>
+  </TextSection>
+</Layout>
